@@ -6,3 +6,4 @@
 /.sconsign.dblite
 
 actions/usr
+actions/files/*
