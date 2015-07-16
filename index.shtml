@@ -3,23 +3,19 @@
     <head>
         <meta charset="utf-8">
         <title>Converter</title>
-        {% load staticfiles %}
-        <link href="{% static 'converter/css/dropzone.css' %}" type="text/css" rel="stylesheet"/>
+        <link href="css/dropzone.css" type="text/css" rel="stylesheet"/>
     </head>
     <body>
         <!-- IMPORTANT enctype attribute! -->
-        <form class="dropzone" action="{% url 'converter:converter' %}" method="post" enctype="multipart/form-data" id="myDropzone">
-            {% csrf_token %}
+        <form class="dropzone" action="actions/convert.py" method="post" enctype="multipart/form-data" id="myDropzone">
         </form>
  
-        <script src="{% static 'converter/js/dropzone.js' %}"></script>
-        <script src="{% static 'converter/js/FileSaver.js' %}"></script>
+        <script src="js/dropzone.js"></script>
+        <script src="js/FileSaver.js"></script>
         <script type="text/javascript">
             Dropzone.options.myDropzone = {
-
                 // Uploading dropped files immediately
                 autoProcessQueue : true,
-
                 init : function() {
                     this.on("sending", function(file, xhr, formData) {
                         xhr.responseType = "blob";

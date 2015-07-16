@@ -4,3 +4,5 @@
 *.kmz
 *.pyc
 /.sconsign.dblite
+
+actions/usr

@@ -1,0 +1,9 @@
+Addhandler mod_python .py
+PythonHandler mod_python.publisher
+PythonDebug On
+
+<FilesMatch ".\.(shtml|js|css)$">
+  AddType text/html .shtml
+  SetHandler server-parsed
+</FilesMatch>
+
