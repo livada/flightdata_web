@@ -12,4 +12,4 @@ This script needs flight2kml converter to be installed here like this:
 Directory setup
 ---------------
 
-Also create a directory ```files``` with permissions ```777``` if it doesn't already exsist.
+Also create a directory ```cache``` with permissions ```777``` if it doesn't already exsist.
